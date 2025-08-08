@@ -6,13 +6,6 @@
 * text=auto eol=lf
 
 # =========================
-# OS별 줄바꿈 강제
-# =========================
-
-# Windows 배치 스크립트는 CRLF 사용
-*.bat text eol=crlf
-
-# =========================
 # 파일 타입별 diff/merge 전략
 # =========================
 
@@ -51,13 +44,6 @@
 
 # PDF → 바이너리 취급
 *.pdf binary
-
-# =========================
-# Git LFS 적용 (옵션)
-# =========================
-# 대용량 파일은 Git LFS로 관리할 때 활성화
-# *.psd filter=lfs diff=lfs merge=lfs -text
-# *.zip filter=lfs diff=lfs merge=lfs -text
 
 # =========================
 # 기타 설정
