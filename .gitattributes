@@ -1,0 +1,70 @@
+# =========================
+# Git 기본 설정
+# =========================
+
+# 텍스트 파일은 LF(Line Feed)로 통일
+* text=auto eol=lf
+
+# =========================
+# OS별 줄바꿈 강제
+# =========================
+
+# Windows 배치 스크립트는 CRLF 사용
+*.bat text eol=crlf
+
+# =========================
+# 파일 타입별 diff/merge 전략
+# =========================
+
+# JavaScript / TypeScript / JSON / Markdown → 텍스트 diff 사용
+*.js  text diff
+*.ts  text diff
+*.tsx text diff
+*.json text diff
+*.md  text diff
+*.yml text diff
+*.yaml text diff
+
+# 이미지 → 바이너리 취급 (diff/merge 불가)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text  # SVG는 XML 기반이라 diff 가능
+*.ico binary
+
+# 폰트 파일 → 바이너리 취급
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+
+# 동영상/오디오 파일 → 바이너리 취급
+*.mp4 binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+
+# =========================
+# 문서 포맷
+# =========================
+
+# PDF → 바이너리 취급
+*.pdf binary
+
+# =========================
+# Git LFS 적용 (옵션)
+# =========================
+# 대용량 파일은 Git LFS로 관리할 때 활성화
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.zip filter=lfs diff=lfs merge=lfs -text
+
+# =========================
+# 기타 설정
+# =========================
+
+# macOS Finder에서 생기는 파일 무시
+.DS_Store export-ignore
+
+# node_modules 제외 (npm/yarn/pnpm install로 재생성)
+node_modules/ export-ignore

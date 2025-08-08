@@ -1,0 +1,30 @@
+{
+  "recommendations": [
+    // ===== 핵심 개발 도구 (코드 품질 & 포맷팅) =====
+    "esbenp.prettier-vscode", // 코드 포맷팅 자동화
+    "dbaeumer.vscode-eslint", // 코드 품질 검사 및 자동 수정
+    "usernamehw.errorlens", // 인라인 오류 표시 (코드 옆 ESLint 오류, 경고 실시간 표시)
+    "editorconfig.editorconfig", // 다양한 에디터에서 일관된 설정 사용
+
+    // ===== 네비게이션 & 자동완성 =====
+    "christian-kohler.path-intellisense", // import 경로, 파일 경로 자동완성
+    "pranaygp.vscode-css-peek", // CSS 클래스 정의로 빠른 이동
+
+    // ===== 스타일링 & CSS =====
+    "bradlc.vscode-tailwindcss", // Tailwind CSS 클래스 자동완성, 미리보기
+
+    // ===== HTML/JSX 개발 도구 =====
+    "formulahendry.auto-close-tag", // HTML/JSX 태그 자동 닫기
+    "formulahendry.auto-rename-tag", // HTML/JSX 태그 자동 이름 변경
+    "vincaslt.highlight-matching-tag", // 매칭되는 태그 하이라이트
+
+    // ===== 개발 편의 도구 =====
+    "oderwat.indent-rainbow", // 들여쓰기 레벨별 색상 표시
+    "formulahendry.code-runner", // 코드 실행 (JavaScript, TypeScript 등)
+
+    // ===== 웹 개발 도구 =====
+    "ritwickdey.liveserver", // 실시간 개발 서버
+    "techer.open-in-browser", // 브라우저에서 파일 열기
+    "jock.svg" // SVG 파일 지원 및 미리보기
+  ]
+}
