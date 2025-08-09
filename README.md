@@ -1,4 +1,4 @@
-> 이 README.md는 보일러플레이트를 사용하는 "프로젝트"에서 편집하여 쓰는 템플릿입니다. 보일러플레이트 자체의 사용법/규칙/업데이트는 위키를 참고하세요: [보일러플레이트 위키](https://github.com/your-org/FE-boilerplate/wiki)
+> 이 README.md는 보일러플레이트를 사용하는 "프로젝트"에서 편집하여 쓰는 템플릿입니다. 보일러플레이트 자체의 사용법/규칙/업데이트는 위키를 참고하세요: [보일러플레이트 위키](https://github.com/lkbrothers/Bolierplate-FE/wiki)
 
 # [프로젝트명]
 
