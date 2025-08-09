@@ -1,69 +1,122 @@
-# React + TypeScript + Vite
+> 이 README.md는 보일러플레이트를 사용하는 "프로젝트"에서 편집하여 쓰는 템플릿입니다. 보일러플레이트 자체의 사용법/규칙/업데이트는 위키를 참고하세요: [보일러플레이트 위키](https://github.com/your-org/FE-boilerplate/wiki)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# [프로젝트명]
 
-Currently, two official plugins are available:
+> 작성 형태 : `간략한 프로젝트 소개`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 개요
 
-## Expanding the ESLint configuration
+- 문제/목표:
+- 핵심 기능:
+- 대상 사용자:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 주요 기능
+> 작성 형태 : `- **[주요 기능]** : 기능 설명`
 
-```js
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+## 🛠 기술 스택
+> 작성 형태 : `- **[기술스택명]** : 기술 스택 사용 목적`
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Frontend
+- **React 19** : 사용자 인터페이스 구축
+- **TypeScript** : 타입 안전성 보장
+- **Vite** : 빠른 개발 환경 및 빌드 도구
+- **Tailwind CSS** : 스타일링 프레임워크
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+### State Management
+- **Zustand** : 경량 상태 관리 라이브러리
+- **TanStack Query** : 서버 상태 관리
+
+### UI Components
+
+- ** ** :
+
+## 📁 프로젝트 구조
+
+```
+src/
+├── components/          # 재사용 가능한 컴포넌트
+│   ├── layout/         # 레이아웃 컴포넌트
+│   ├── main/           # 메인 페이지 컴포넌트
+│   └── ui/             # 기본 UI 컴포넌트
+├── hooks/              # 커스텀 훅
+├── lib/                # 유틸리티 라이브러리
+├── models/             # 타입 정의
+├── pages/              # 페이지 컴포넌트
+├── providers/          # React Context Provider
+├── stores/             # Zustand 상태 관리
+└── styles/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎮 주요 페이지
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+> 작성 형태 : `- **[페이지명]** : 페이지 설명`
 
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+
+## 🔧 설치 및 실행
+
+### 필수 요구사항
+
+- Node.js: 22.x
+- pnpm: 10.14.x
+  - package.json의 packageManager에 따름
+
+### 설치
+
+```bash
+# pnpm 설정 및 의존성 설치
+corepack enable && corepack prepare pnpm --activate
+pnpm i
+pnpm dev
 ```
+
+### 환경 변수
+
+필수 예시:
+
+```env
+VITE_API_BASE_URL=
+```
+
+### 스크립트
+
+```json
+{
+  "dev": "vite",
+  "build": "tsc -b && vite build",
+  "preview": "vite preview",
+  "type-check": "tsc --noEmit",
+  "lint": "eslint .",
+  "lint:fix": "eslint . --fix",
+  "format": "prettier --write .",
+  "format:check": "prettier --check ."
+}
+```
+
+## 🎯 주요 기능 상세
+
+### [주요 기능 1]
+- ** [하위 기능 1] : [하위 기능 설명]
+
+### 컨벤션/워크플로우
+
+- 커밋 규칙: Conventional Commits (Commitlint), 커밋 템플릿 사용 권장
+- PR 템플릿: `.github/pull_request_template.md`
+- 브랜치 전략: 예) trunk-based 또는 Git Flow (팀 결정)
+- 코드 스타일: ESLint/Prettier 규칙 준수
+
+## 🚀 배포
+
+이 프로젝트는 Vite를 사용하여 정적 사이트로 빌드됩니다:
+
+### 배포/CI
+
+- 대상: (예: Vercel/Cloudflare/Netlify)
+- 시크릿/환경: (예: VITE_API_BASE_URL 등)
+
+### 라이선스
+
+- (예: 사내/비공개, 또는 MIT)
+
+## 📝 라이선스
+
+이 프로젝트는 MIT 라이선스 하에 배포됩니다.
